@@ -15,7 +15,7 @@ CORS(app)
 embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 DB_PATH = "products.db"
-API_KEY = "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"
+API_KEY = "your_key"
 ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 
 def load_data(file_path="farm2bag_web_14.txt"):
@@ -42,7 +42,7 @@ index.add(embeddings)
 id_to_text = {i: data[i] for i in range(len(data))}
 
 # Initialize Groq client
-client = groq.Client(api_key="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")  # Replace with actual key
+client = groq.Client(api_key="your_key")  # Replace with actual key
 
 def detect_intent(text):
     """Detects if the input is a greeting or a general query."""
